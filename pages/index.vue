@@ -102,9 +102,6 @@ h3 {
   margin-bottom: 0.75rem;
 }
 
-.card + .card {
-  margin-left: 1rem;
-}
 .card img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -114,10 +111,14 @@ h3 {
   width: 100%;
   height: 100%;
 }
-
+@media screen and (min-width: 1024px) {
+  .card + .card {
+    margin-left: 1rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .title {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 1;
   }
 }
@@ -128,6 +129,10 @@ h3 {
   }
   .card {
     margin-bottom: 2rem;
+  }
+  section h3,
+  section .subtitle {
+    line-height: 1.2;
   }
 }
 </style>

@@ -3,16 +3,7 @@
     <div class="container">
       <div class="logo">
         <img src="../assets/images/logo-footer.svg" alt="company logo" />
-        <div class="social-links">
-          <ul>
-            <li>
-              <a href="/">f</a>
-            </li>
-            <li>
-              <a href="/">t</a>
-            </li>
-          </ul>
-        </div>
+        <FooterSocial />
       </div>
       <div class="links">
         <ul>
@@ -56,6 +47,16 @@
     </div>
   </footer>
 </template>
+
+<script>
+import FooterSocial from "~/components/FooterSocial.vue";
+export default {
+  components: {
+    FooterSocial
+  }
+};
+</script>  
+
 <style scoped>
 footer {
   margin-top: auto;
@@ -73,6 +74,7 @@ footer .container > div {
 footer .logo {
   flex-direction: column;
 }
+
 .logo img {
   margin-bottom: 3rem;
   align-self: flex-start;
@@ -130,9 +132,19 @@ footer .logo {
   .links li {
     flex-basis: auto;
     align-self: center;
+    margin-bottom: 0.5rem;
+  }
+  .links {
+    margin-bottom: 1.5rem;
   }
   .rights {
     align-items: center;
+  }
+  .rights a {
+    margin-bottom: 1rem;
+  }
+  .attribution {
+    margin-top: 2rem;
   }
 }
 </style>

@@ -56,6 +56,9 @@ li {
   ul {
     flex-direction: column;
   }
+  header .logo {
+    margin-bottom: 1rem;
+  }
   header .invite {
     margin: 1rem auto;
   }
