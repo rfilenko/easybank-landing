@@ -1,11 +1,13 @@
 <template>
   <main>
+    <SectionIntro />
     <SectionFeatures :features="features" />
     <SectionArticles :articles="articles" />
   </main>
 </template>
 
 <script>
+import SectionIntro from "~/components/SectionIntro.vue";
 import SectionFeatures from "~/components/SectionFeatures.vue";
 import SectionArticles from "~/components/SectionArticles.vue";
 import { articles, features } from "static/data.js";
@@ -22,6 +24,7 @@ export default {
     ]
   },
   components: {
+    SectionIntro,
     SectionFeatures,
     SectionArticles
   },
@@ -58,9 +61,17 @@ section {
   background: var(--veryLightGray-clr);
   padding: 3rem 0;
 }
+section h1,
 section h3,
-section .subtitle {
+section .subtitle,
+section .invite {
   align-self: flex-start;
+}
+section .subtitle {
+  margin-bottom: 2.5rem;
+  color: var(--grayishBlue-clr);
+  max-width: 59ch;
+  text-align: left;
 }
 section .container {
   flex-direction: column;
@@ -70,10 +81,18 @@ section .container {
   display: flex;
   justify-content: space-between;
 }
+h1,
 h3 {
-  font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: left;
+}
+h1 {
+  font-size: 3.75rem;
+  max-width: 15ch;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 2.5rem;
 }
 .card {
   box-shadow: 1px 1px 14px 5px hsla(180, 29%, 50%, 0.1);

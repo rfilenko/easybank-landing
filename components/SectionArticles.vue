@@ -36,25 +36,4 @@ export default {
 };
 </script>
 <style>
-.section-features {
-  background: var(--lightGrayishBlue-clr);
-}
-.section-features h3 {
-  margin-bottom: 1rem;
-}
-.section-features .subtitle {
-  margin-bottom: 2.5rem;
-  color: var(--grayishBlue-clr);
-  max-width: 59ch;
-  text-align: left;
-}
-.section-features .card {
-  background: transparent;
-}
-.section-features .card img {
-  width: 72px;
-}
-.section-features .card .text {
-  color: var(--grayishBlue-clr);
-}
 </style>

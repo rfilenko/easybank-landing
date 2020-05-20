@@ -35,6 +35,7 @@ header {
   width: 100%;
   background: var(--white-clr);
   padding: 1rem;
+  z-index: 10;
 }
 header .invite {
   margin-left: auto;
