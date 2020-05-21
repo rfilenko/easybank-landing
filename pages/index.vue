@@ -52,7 +52,6 @@ export default {
 .container {
   margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 15px;
