@@ -51,7 +51,6 @@ export default {
 @media screen and (min-width: 1024px) {
   .section-intro {
     padding-top: 0;
-    padding-bottom: 0;
     margin-top: -5.5rem;
     margin-bottom: -6rem;
   }

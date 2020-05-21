@@ -55,6 +55,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 15px;
 }
 
 section {
@@ -77,10 +78,6 @@ section .container {
   flex-direction: column;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
 h1,
 h3 {
   margin-bottom: 2rem;
@@ -93,6 +90,10 @@ h1 {
 }
 h3 {
   font-size: 2.5rem;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 .card {
   box-shadow: 1px 1px 14px 5px hsla(180, 29%, 50%, 0.1);
@@ -130,6 +131,25 @@ h3 {
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+  section h3,
+  section .subtitle {
+    align-self: center;
+  }
+  .card {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  .wrapper {
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .card + .card {
     margin-left: 1rem;
