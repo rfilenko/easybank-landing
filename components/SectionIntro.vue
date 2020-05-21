@@ -29,12 +29,8 @@ export default {
 </script>
 <style>
 .section-intro {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: -5.5rem;
-  margin-bottom: -6rem;
   background-color: var(--veryLightGray-clr);
-  background-image: url(/_nuxt/assets/images/bg-intro-desktop.svg);
+  background-image: url("/images/bg-intro-desktop.svg");
   background-position: 76vh -215px;
   background-repeat: no-repeat;
   background-size: 90%;
@@ -44,12 +40,33 @@ export default {
 }
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
 }
 .content {
   align-self: center;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .section-intro {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -5.5rem;
+    margin-bottom: -6rem;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-intro {
+    background-image: url("/images/bg-intro-mobile.svg");
+    background-position: top center;
+    background-size: 100%;
+  }
+  .abstract {
+    grid-row: 1;
+  }
 }
 </style>

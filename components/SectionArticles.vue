@@ -36,4 +36,9 @@ export default {
 };
 </script>
 <style>
+@media screen and (max-width: 600px) {
+  .section-articles .card .content {
+    text-align: left;
+  }
+}
 </style>

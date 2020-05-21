@@ -53,4 +53,12 @@ export default {
 .section-features .card .text {
   color: var(--grayishBlue-clr);
 }
+@media screen and (max-width: 600px) {
+  .section-features .card img {
+    margin: 0 auto 1rem;
+  }
+  .section-features h3 {
+    text-align: center;
+  }
+}
 </style>

@@ -149,9 +149,34 @@ h3 {
   .card {
     margin-bottom: 2rem;
   }
+  .card .content {
+    text-align: center;
+  }
+
   section h3,
   section .subtitle {
     line-height: 1.2;
+  }
+  section h1,
+  section h3,
+  section .subtitle,
+  section .invite {
+    align-self: center;
+  }
+  section h1,
+  section h3 {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  section .invite {
+    align-self: center;
+  }
+  .content {
+    margin-bottom: 2rem;
+  }
+  section .subtitle {
+    margin-bottom: 2rem;
   }
 }
 </style>
