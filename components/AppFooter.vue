@@ -47,7 +47,7 @@
       </p>
       <p>
         Coded by
-        <a class="author" href="https://rfilenko-cv.netlify.app/">@Roman Filenko</a>.
+        <a class="author" href="https://rfilenko-cv.netlify.app/">@Roman Filenko</a>
       </p>
     </div>
   </footer>

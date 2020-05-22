@@ -1,37 +1,49 @@
 <template>
   <header>
     <div class="container flex-col md:flex-row">
-      <div class="logo self-center">
+      <div class="logo w-full md:w-auto flex justify-between self-center">
         <nuxt-link to="/">
           <img src="../assets/images/logo.svg" alt="company logo" />
         </nuxt-link>
+        <div class="hamburger-menu md:hidden" @click="toggleMenu">
+          <img v-if="menuVisible" src="../assets/images/icon-close.svg" alt="menu menu-close" />
+          <img v-else src="../assets/images/icon-hamburger.svg" alt="menu menu-hamburger" />
+        </div>
       </div>
-      <nav class="mx-auto">
+      <nav class="open hidden mx-auto md:block" :class="menuVisible ? 'open': ''">
         <ul class="flex flex-col md:flex-row">
-          <li>
-            <nuxt-link to="/" class="mx-2">Home</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" class="mx-2">About</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" class="mx-2">Contact</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" class="mx-2">Blog</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" class="mx-2">Careers</nuxt-link>
+          <li v-for="menuItem in menuLinks" :key="menuItem.id">
+            <nuxt-link @click.native="toggleMenu" :to="menuItem.link" class="mx-2">{{menuItem.text}}</nuxt-link>
           </li>
         </ul>
       </nav>
-      <div class="invite">
+      <div class="hidden md:block">
         <nuxt-link class="btn" to="/">Request Invite</nuxt-link>
       </div>
     </div>
   </header>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      menuVisible: false,
+      menuLinks: [
+        { text: "Home", link: "/", id: 1 },
+        { text: "About", link: "/about", id: 2 },
+        { text: "Contact", link: "/contact", id: 3 },
+        { text: "Blog", link: "/blog", id: 4 },
+        { text: "Careers", link: "/careers", id: 5 }
+      ]
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuVisible = !this.menuVisible;
+    }
+  }
+};
+</script>  
 <style>
 header {
   width: 100%;
@@ -39,12 +51,12 @@ header {
   padding: 0.75rem 1rem;
   z-index: 10;
 }
-header .logo {
+header .logo a {
   transform: perspective(1px) translateZ(0);
 }
-header .logo:hover,
-header .logo:focus,
-header .logo:active {
+header .logo a:hover,
+header .logo a:focus,
+header .logo a:active {
   animation: logo-hover 1s ease-in-out 1;
 }
 header .logo a {
@@ -77,15 +89,18 @@ header .logo a:focus {
     transform: translateY(0);
   }
 }
+.hamburger-menu img {
+  width: 1rem;
+  height: 1rem;
+}
 header .invite {
   flex-basis: auto;
 }
 nav li {
+  position: relative;
+  margin-bottom: 0.75rem;
   color: var(--grayishBlue-clr);
   font-size: 0.875rem;
-}
-nav li {
-  position: relative;
 }
 nav li a:hover {
   color: var(--secondary-clr);
@@ -93,11 +108,12 @@ nav li a:hover {
 nav a:focus {
   color: var(--accent-clr);
 }
+
 @media screen and (min-width: 1024px) {
   nav li:hover:after {
     content: "";
     position: absolute;
-    bottom: -1.35rem;
+    bottom: -1.55rem;
     left: 0;
     width: 100%;
     height: 4px;
@@ -109,12 +125,22 @@ nav a:focus {
   }
 }
 @media screen and (max-width: 600px) {
-  header .container,
-  header .logo {
-    margin-bottom: 1rem;
-  }
   header .invite {
     margin: 1rem auto;
+  }
+  nav.open {
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white-clr);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0px 8px 15px 15px rgba(0, 0, 0, 0.1);
+  }
+  nav.open li {
+    font-size: 1rem;
   }
 }
 </style>
