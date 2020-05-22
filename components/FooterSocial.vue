@@ -1,7 +1,7 @@
 <template>
   <div class="social-links">
-    <ul>
-      <li>
+    <ul class="flex">
+      <li class="mx-2">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
@@ -11,7 +11,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="mx-2">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
@@ -21,7 +21,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="mx-2">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
             <path
@@ -31,7 +31,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="mx-2">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
@@ -41,7 +41,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="mx-2">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
@@ -60,9 +60,6 @@ export default {};
 </script>
 
 <style>
-footer .social-links ul {
-  flex-direction: row;
-}
 svg {
   transition: all 0.2s ease;
 }
@@ -74,8 +71,5 @@ footer .social-links a:hover svg {
 }
 footer .social-links a:hover svg path {
   fill: var(--primary-clr);
-}
-.social-links {
-  margin-bottom: 2rem;
 }
 </style>

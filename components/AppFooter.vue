@@ -9,7 +9,7 @@
         />
         <FooterSocial />
       </div>
-      <div class="links flex mb-6 md:mb-0">
+      <div class="links flex mb-6">
         <ul class="flex flex-wrap">
           <li class="flex self-center mb-2">
             <nuxt-link to="/about">About Us</nuxt-link>
@@ -36,7 +36,7 @@
         <p>&copy; Easybank. All Rights Reserved</p>
       </div>
     </div>
-    <div class="attribution mt-8 md:mt-0 flex flex-col items-center">
+    <div class="attribution mt-12 md:mt-6">
       <p>
         Challenge by
         <a
@@ -47,7 +47,7 @@
       </p>
       <p>
         Coded by
-        <a href="https://rfilenko-cv.netlify.app/">@Roman Filenko</a>.
+        <a class="author" href="https://rfilenko-cv.netlify.app/">@Roman Filenko</a>.
       </p>
     </div>
   </footer>
@@ -84,6 +84,27 @@ footer {
 .attribution p + p {
   margin-bottom: 0.5rem;
 }
+.attribution {
+  @apply flex flex-col items-center;
+}
+.attribution .author {
+  transform: perspective(1px) translateZ(0);
+  background: linear-gradient(45deg, var(--primary-clr), var(--accent-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+}
+.attribution .author:hover,
+.attribution .author:focus,
+.attribution .author:active {
+  transform: scale(1.05);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  background: linear-gradient(90deg, var(--accent-clr), var(--primary-clr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media screen and (max-width: 600px) {
   .links li {
     flex-basis: auto;

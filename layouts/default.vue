@@ -65,12 +65,16 @@ body {
   background: linear-gradient(to right, var(--primary-clr), var(--accent-clr));
   border: none;
   border-radius: 20px;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5em 1.25em;
   color: var(--white-clr);
+  font-size: 0.75rem;
   white-space: nowrap;
   cursor: pointer;
+  display: inline-block;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
   opacity: 0.89;
   background: linear-gradient(to right, var(--accent-clr), var(--primary-clr));
 }
