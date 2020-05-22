@@ -1,8 +1,8 @@
 <template>
-  <div class="social-links">
-    <ul class="flex">
+  <div class="social-links mb-4 md:mb-0">
+    <ul class="flex justify-center md:justify-start">
       <li class="mx-2">
-        <a href="#">
+        <a href="#facebook-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
               fill="#FFF"
@@ -12,7 +12,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#">
+        <a href="#youtube-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
               fill="#FFF"
@@ -22,7 +22,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#">
+        <a href="#twitter-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
             <path
               fill="#FFF"
@@ -32,7 +32,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#">
+        <a href="#pinterest-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
               fill="#FFF"
@@ -42,7 +42,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#">
+        <a href="#instagram-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
               fill="#FFF"
@@ -66,10 +66,18 @@ svg {
 footer .social-links svg path {
   fill: var(--white-clr);
 }
-footer .social-links a:hover svg {
+footer .social-links a:hover svg,
+footer .social-links a:focus svg {
   transform: scale(1.25, 1.25);
 }
-footer .social-links a:hover svg path {
+footer .social-links a:focus svg {
+  outline-style: dotted;
+  outline-color: var(--primary-clr);
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+footer .social-links a:hover svg path,
+footer .social-links a:focus svg path {
   fill: var(--primary-clr);
 }
 </style>

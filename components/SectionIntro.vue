@@ -9,7 +9,7 @@
             for spending, saving, budgeting, investing, and much more.
           </div>
           <div class="invite">
-            <a class="btn" href="/">Request Invite</a>
+            <nuxt-link class="btn" to="/">Request Invite</nuxt-link>
           </div>
         </div>
         <div class="abstract">

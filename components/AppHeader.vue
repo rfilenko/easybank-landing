@@ -12,21 +12,21 @@
             <nuxt-link to="/" class="mx-2">Home</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/about" class="mx-2">About</nuxt-link>
+            <nuxt-link to="/" class="mx-2">About</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/contact" class="mx-2">Contact</nuxt-link>
+            <nuxt-link to="/" class="mx-2">Contact</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/blog" class="mx-2">Blog</nuxt-link>
+            <nuxt-link to="/" class="mx-2">Blog</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/careers" class="mx-2">Careers</nuxt-link>
+            <nuxt-link to="/" class="mx-2">Careers</nuxt-link>
           </li>
         </ul>
       </nav>
       <div class="invite">
-        <a class="btn" href="/">Request Invite</a>
+        <nuxt-link class="btn" to="/">Request Invite</nuxt-link>
       </div>
     </div>
   </header>
@@ -46,6 +46,15 @@ header .logo:hover,
 header .logo:focus,
 header .logo:active {
   animation: logo-hover 1s ease-in-out 1;
+}
+header .logo a {
+  display: inline-block;
+}
+header .logo a:focus {
+  outline-style: dotted;
+  outline-color: var(--accent-clr);
+  outline-width: 2px;
+  outline-offset: 2px;
 }
 
 @keyframes logo-hover {
@@ -68,11 +77,9 @@ header .logo:active {
     transform: translateY(0);
   }
 }
-
 header .invite {
   flex-basis: auto;
 }
-
 nav li {
   color: var(--grayishBlue-clr);
   font-size: 0.875rem;
@@ -82,6 +89,9 @@ nav li {
 }
 nav li a:hover {
   color: var(--secondary-clr);
+}
+nav a:focus {
+  color: var(--accent-clr);
 }
 @media screen and (min-width: 1024px) {
   nav li:hover:after {

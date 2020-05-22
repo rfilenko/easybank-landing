@@ -9,8 +9,8 @@
         />
         <FooterSocial />
       </div>
-      <div class="links flex mb-6">
-        <ul class="flex flex-wrap">
+      <div class="links flex self-center mb-6">
+        <ul class="flex flex-col flex-wrap md:flex-row">
           <li class="flex self-center mb-2">
             <nuxt-link to="/about">About Us</nuxt-link>
           </li>
@@ -32,7 +32,7 @@
         </ul>
       </div>
       <div class="rights flex flex-col md:items-end">
-        <a class="btn mb-4 md:mb-8" href="/">Request Invite</a>
+        <a class="btn mb-4 md:mb-8 self-center md:self-end" href="/">Request Invite</a>
         <p>&copy; Easybank. All Rights Reserved</p>
       </div>
     </div>
@@ -62,7 +62,7 @@ export default {
 };
 </script>  
 
-<style scoped>
+<style>
 footer {
   margin-top: auto;
   background: var(--secondary-clr);
@@ -78,8 +78,10 @@ footer {
 .rights p {
   color: var(--grayishBlue-clr);
 }
-.links a:hover {
+footer .links a:hover,
+footer .links a:focus {
   color: var(--primary-clr);
+  outline-color: var(--primary-clr);
 }
 .attribution p + p {
   margin-bottom: 0.5rem;
@@ -94,6 +96,7 @@ footer {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   vertical-align: middle;
+  margin-left: 0.5em;
 }
 .attribution .author:hover,
 .attribution .author:focus,
