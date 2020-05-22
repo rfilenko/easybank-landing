@@ -44,6 +44,7 @@ html {
   margin: 0 auto;
   text-align: center;
   margin-top: 2rem;
+  position: relative;
 }
 .btn {
   background: linear-gradient(to right, var(--primary-clr), var(--accent-clr));

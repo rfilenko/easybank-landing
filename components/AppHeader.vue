@@ -10,7 +10,7 @@
           <img v-else src="../assets/images/icon-hamburger.svg" alt="menu menu-hamburger" />
         </div>
       </div>
-      <nav class="open hidden mx-auto md:block" :class="menuVisible ? 'open': ''">
+      <nav class="mx-auto md:block" :class="menuVisible ? 'open': 'hidden'">
         <ul class="flex flex-col md:flex-row">
           <li v-for="menuItem in menuLinks" :key="menuItem.id">
             <nuxt-link @click.native="toggleMenu" :to="menuItem.link" class="mx-2">{{menuItem.text}}</nuxt-link>
