@@ -2,7 +2,7 @@
   <div class="social-links mb-4 md:mb-0">
     <ul class="flex justify-center md:justify-start">
       <li class="mx-2">
-        <a href="#facebook-link">
+        <a href="#" aria-label="facebook-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
               fill="#FFF"
@@ -12,7 +12,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#youtube-link">
+        <a href="#" aria-label="youtube-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
               fill="#FFF"
@@ -22,7 +22,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#twitter-link">
+        <a href="#" aria-label="twitter-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
             <path
               fill="#FFF"
@@ -32,7 +32,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#pinterest-link">
+        <a href="#" aria-label="pinterest-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path
               fill="#FFF"
@@ -42,7 +42,7 @@
         </a>
       </li>
       <li class="mx-2">
-        <a href="#instagram-link">
+        <a href="#" aria-label="instagram-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
             <path
               fill="#FFF"
